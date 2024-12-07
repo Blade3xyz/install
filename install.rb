@@ -153,6 +153,7 @@ sys("#{sudo} cp -f #{INSTALL_DIR}/user/client_config.rb #{CONFIG_DIR}/")
 
 log "Changing ownership of files"
 sys("#{sudo} chown $USER #{INSTALL_DIR}/Gemfile.lock")
+sys("#{sudo} chmod +x #{INSTALL_DIR}/blade3_client.rb")
 
 
 log "Install dependencies via bundler"
