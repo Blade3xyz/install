@@ -49,7 +49,7 @@ def whereis(tool_name)
 
   result = `which #{tool_name}` 
 
-  if result.include? "which: no"
+  if result.include? "which: no" or result.empty?
     return "none"
   end
 
